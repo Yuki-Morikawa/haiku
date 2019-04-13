@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+</head>
+<body>
+  <div id="modal-view" class="edit-view">
+    <div class="form-box">
+      <h2>句を詠みなおす</h2>
+      <form action="/renew/<%= @content.id %>" method="post">
+       <p>上の句</p>
+      <input type="text" maxlength="5" name="haiku1" value="<%= @content.haiku1 %>">
+      <input type="text" maxlength="7" name="haiku2" value="<%= @content.haiku2 %>">
+      <input type="text" maxlength="5" name="haiku3" value="<%= @content.haiku3 %>">
+      <h3>下の句</h3>
+      <input type="text" maxlength="7" name="haiku4" value="<%= @content.haiku4 %>">
+      <input type="text" maxlength="7" name="haiku5" value="<%= @content.haiku5 %>">
+      <p>ペンネーム</p>
+      <input type="text" maxlength="10" name="author" value="<%= @content.author %>">
+      <input type="submit" value="投稿">
+    </form>
+    </div>
+  </div>
+</body>
+</html>
